@@ -1,8 +1,3 @@
-h1.ciao{
-    background-color: aqua;
-}
-
-
 .bg-light{
     background-color:cornflowerblue !important;
 }
@@ -11,16 +6,8 @@ h1.ciao{
     display:flex;
     justify-content:space-between;
     text-align: center;
-    justify-content: center;
 }
 
-
-.d-flex{
-    
-    margin-left: auto ;
-    padding-right: 42%;
-    
-}
 
 .navbar-brand{
    color: white;
@@ -28,6 +15,16 @@ h1.ciao{
 
 .bi {
     font-size:xx-large;
-    padding-right: 15px;
     color: white;
+}
+
+#toptextmenu{
+    background-color:cornflowerblue;
+    background-size: 50%;;
+    color: white;
+}
+
+#leftmenu{
+    position: fixed;
+    left: 0;
 }
