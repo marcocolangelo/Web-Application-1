@@ -1,0 +1,33 @@
+h1.ciao{
+    background-color: aqua;
+}
+
+
+.bg-light{
+    background-color:cornflowerblue !important;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.d-flex{
+    
+    margin-left: auto ;
+    padding-right: 42%;
+    
+}
+
+.navbar-brand{
+   color: white;
+}
+
+.bi {
+    font-size:xx-large;
+    padding-right: 15px;
+    color: white;
+}
