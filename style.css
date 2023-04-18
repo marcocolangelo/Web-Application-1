@@ -1,12 +1,14 @@
 
 .bg-light{
     background-color:rgb(52, 116, 235) !important;
+    z-index: 10 !important;
 }
 
 .navbar{
     display:flex;
     justify-content:space-between;
     text-align: center;
+    
 }
 
 .navbar-brand{
@@ -33,7 +35,7 @@
 }
 
 #navbar-example3{
-   
+    
     background-color: aliceblue;
     width: 60%;
     padding-right: 0% !important;
@@ -49,6 +51,7 @@
     position: fixed;
     left: 0;
     height: 100% !important;
+    z-index: 5;
 }
 
 .display-1{
