@@ -3,7 +3,7 @@
     background-color:rgb(52, 116, 235) !important;
 }
 
-.navbar{
+.mb-0{
     display:flex;
     justify-content:space-between;
     text-align: center;

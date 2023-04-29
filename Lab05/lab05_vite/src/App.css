@@ -1,0 +1,18 @@
+#uppcont{
+  
+  display: grid;
+  grid-template-columns: 0.3fr 1.05fr  ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+#menucol{
+  width: 128%;
+  grid-column: 0;
+  grid-row: 0;
+}
+
+#tabcol{
+  margin-top: 10px;
+}
