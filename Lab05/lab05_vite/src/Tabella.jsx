@@ -1,8 +1,9 @@
-import {Table,Row,Col, Tab} from 'react-bootstrap'
+import {Table,Row,Col, Tab,Form,Button} from 'react-bootstrap'
+import { useState } from "react";
 
 function Tabella(props) {
     const lib = props.library;
-    let films = props.libFilms;
+    const films = props.films;
    
 
 
@@ -20,10 +21,10 @@ function Tabella(props) {
                 </tr>
             </thead>
             <tbody>
-                {films.map( f =><TabellaRow key={f.id} film={f}/>)}
+                {films.map( f =>  <TabellaRow key={f.id} film={f} changeFav={props.changeFav}/>)}
             </tbody>
             <tfoot>
-                
+               
             </tfoot>
         </Table>
       </>
@@ -37,20 +38,37 @@ function Tabella(props) {
   }
 
   function TabellaRow(props){
-    return <tr>
+    const [checked,setChecked] = useState(props.film.fav);
+
+    const handleCheck = (event) => {
+        
+        setChecked(event.target.checked);
+        props.changeFav(props.film.id);
+        
+    };
+    if (props.film.date != undefined){
+    return (
+        <tr>
         <td>{props.film.id}</td>
         <td>{props.film.title}</td>
-        <td>{props.film.fav}</td>
-        <td>{props.film.date}</td>
+        <td><Form.Check aria-label="option 1" checked={checked}  onChange={handleCheck}></Form.Check></td>
+        <td>{props.film.date.format('DD/MM/YYYY') }</td>
         <td>{props.film.score}</td>
         
         </tr>
-  }
-
-
-
-  function AnswersDetails(props){
-
+    )
+    }else{
+        return (
+            <tr>
+            <td>{props.film.id}</td>
+            <td>{props.film.title}</td>
+            <td><Form.Check aria-label="option 1" checked={checked}  onChange={handleCheck}></Form.Check></td>
+            <td>UNDEFINED </td>
+            <td>{props.film.score}</td>
+            
+            </tr>
+        )
+    }
   }
 
   export {Tabella};

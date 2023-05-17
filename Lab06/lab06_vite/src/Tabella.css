@@ -1,0 +1,42 @@
+.display-1{
+    grid-column: 2;
+    grid-row: 1;
+    padding-bottom: 10px;
+}
+
+.table{
+    grid-area: 2 / 2 / 6 / 4;
+}
+
+.checkcol{
+    vertical-align: middle;
+}
+
+.rating {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-image: url('file:///D:/Download/star.svg');
+  }
+  
+  .rating input:checked + label {
+    background-image: url('file:///D:/Download/star-fill.svg');
+  }
+
+  #fondo{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .table {
+    vertical-align: middle !important;
+  }
