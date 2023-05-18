@@ -1,0 +1,65 @@
+@APIURL=http://localhost:3000/api
+
+// GET LIST OF FILMS
+GET {{APIURL}}/films
+###
+
+GET {{APIURL}}/films/filters/favorites
+###
+
+GET {{APIURL}}/films/filters/best
+###
+
+GET {{APIURL}}/films/filters/unseen
+###
+
+GET {{APIURL}}/films/filters/seenLastMonth
+###
+
+GET {{APIURL}}/films/5
+###
+
+POST {{APIURL}}/films/add
+Content-Type: application/json
+
+{
+    "title":"Interstellar",
+    "fav":1,
+    "score":5,
+    "date":"2023-05-14"
+}
+###
+
+PUT {{APIURL}}/films/update/8
+Content-Type: application/json
+
+{
+    "title":"Revenant",
+    "fav":0,
+    "score":3,
+    "date":"2023-05-11",
+    "user":1
+}
+###
+
+PUT {{APIURL}}/films/update/score/4
+Content-Type: application/json
+
+{
+    "score":5   
+}
+###
+
+PUT {{APIURL}}/films/update/favorite/1
+Content-Type: application/json
+
+{
+    "fav":1   
+}
+###
+
+DELETE  {{APIURL}}/films/2
+`
+###
+
+
