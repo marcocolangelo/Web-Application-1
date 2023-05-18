@@ -1,65 +1,65 @@
 @APIURL=http://localhost:3000/api
 
-// GET LIST OF QUESTIONS
+// GET LIST OF FILMS
 GET {{APIURL}}/films
-
 ###
 
-// ADD A NEW QUESTION
-POST {{APIURL}}/questions
-Content-Type: application/json
-
-{ 
-    "text": "who won Eurovision?",
-    "author": "music fan",
-    "date": "2023-05-15"
-}
-
+GET {{APIURL}}/films/filters/favorites
 ###
 
-// GET LIST OF ANSWERS TO ONE QUESTION
-GET {{APIURL}}/questions/1/answers
-
+GET {{APIURL}}/films/filters/best
 ###
 
-// GET LIST OF ANSWERS TO ONE QUESTION
-GET {{APIURL}}/questions/2/answers
-
+GET {{APIURL}}/films/filters/unseen
 ###
 
-// ADD A NEW ANSWER (TO A QUESTION)
-POST {{APIURL}}/questions/2/answers
+GET {{APIURL}}/films/filters/seenLastMonth
+###
+
+GET {{APIURL}}/films/5
+###
+
+POST {{APIURL}}/films/add
 Content-Type: application/json
 
 {
-    "text": "Newly added answer",
-    "author": "Testing user", 
-    "date": "2023-05-14"
+    "title":"Interstellar",
+    "fav":1,
+    "score":5,
+    "date":"2023-05-14"
 }
-
 ###
 
-// DELETE AN ANSWER
-DELETE {{APIURL}}/answers/7
+PUT {{APIURL}}/films/update/8
+Content-Type: application/json
+
+{
+    "title":"Revenant",
+    "fav":0,
+    "score":3,
+    "date":"2023-05-11",
+    "user":1
+}
+###
+
+PUT {{APIURL}}/films/update/score/4
+Content-Type: application/json
+
+{
+    "score":5   
+}
+###
+
+PUT {{APIURL}}/films/update/favorite/1
+Content-Type: application/json
+
+{
+    "fav":1   
+}
+###
+
+DELETE  {{APIURL}}/films/2
 `
 ###
 
-// UPDATE THE CONTENT OF AN EXISTING ANSWER
-PUT {{APIURL}}/answers/5
-Content-Type: application/json
 
-{
-    "text": "Updated answer text",
-    "author": "Other user", 
-    "date": "2023-05-15"
-}
-
-###
-
-// UPVOTE AN ANSWER
-POST {{APIURL}}/answers/5/vote
-Content-Type: application/json
-
-{
-    "vote": "up"
-}
